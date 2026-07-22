@@ -26,7 +26,7 @@ class Performance(Base):
     last_changed_date = Column(Date, nullable=False)
 
     player_id = Column(Integer, ForeignKey("player.player_id"))
-    player = relationship("Player", back_populates="performance")
+    player = relationship("Player", back_populates="performances")
 
 class League(Base):
     __tablename__ = "league"

@@ -1,1 +1,2 @@
 SQLALCHEMY>=2.0.0
+Pytest>=8.1.0

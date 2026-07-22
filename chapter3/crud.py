@@ -61,7 +61,7 @@ def get_teams(db: Session, skip: int = 0, limit: int = 100,
         query = query.filter(models.Team.league_id == league_id)
     return query.offset(skip).limit(limit).all()
 
-# Analytics queries
+# Analytics queries for AI and LLMs
 def get_player_count(db: Session):
     query = db.query(models.Player)
     return query.count()
