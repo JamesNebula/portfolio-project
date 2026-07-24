@@ -3,7 +3,7 @@ from typing import List
 from datetime import date
 
 class Performance(BaseModel):
-    model_config = ConfigDict(from_attributes = True)
+    model_config = ConfigDict(from_attributes=True)
     performance_id : int
     player_id : int
     week_number : str
