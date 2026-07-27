@@ -4,17 +4,18 @@ from main import app
 client = TestClient(app)
 
 def test_read_main():
-    response = client.get('/')
+    response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {'message': "API health check successful"}
+    assert response.json() == {"message": "API health check successful"}
 
+# test /v0/players/
 def test_read_players():
-    response = client.get('/v0/players/?skip=0&limit=10000')
+    response = client.get("/v0/players/?skip=0&limit=10000")
     assert response.status_code == 200
     assert len(response.json()) == 1018
 
 def test_read_players_by_name():
-    response = client.get('/v0/players/?first_name=Bryce&last_name=Young')
+    response = client.get("/v0/players/?first_name=Bryce&last_name=Young")
     assert response.status_code == 200
     assert len(response.json()) == 1
     assert response.json()[0].get("player_id") == 2009
