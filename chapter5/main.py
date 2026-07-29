@@ -7,7 +7,7 @@ import crud, schemas
 from database import SessionLocal
 
 api_description = """
-This API provides read-only access to info from the SportsWo(SWC) Fantasy Football API.
+This API provides read-only access to info from the Sports World Central (SWC) Fantasy Football API.
 The endpoints are grouped into the following categories:
 
 ## Analytics
